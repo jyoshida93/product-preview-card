@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem;
+  background-color: var(--cream);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  /* height: 100%; */
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  border-top-left-radius: 1rem; /* Top-left corner rounded */
+  border-top-right-radius: 1rem; /* Top-right corner square */
+  /* border-bottom-right-radius: 10px; Bottom-right corner rounded */
+  /* border-bottom-left-radius: 0; Bottom-left corner square */
+}
+
+h1 {
+  font-family: "Fraunces";
+  font-weight: 700;
+}
+
+h1,
+.item-category {
+  margin: 0 auto;
+}
+
+.item-category {
+  font-size: 1.2rem;
+  color: var(--dark-grayish-blue);
+  font-weight: 100;
+  margin-bottom: 0.6em;
+}
+
+.item-description {
+  line-height: 1.5;
+  color: var(--dark-grayish-blue);
+}
+
+.column {
+  margin: 0;
+}
+
+.product-info-column {
+  padding: 2em;
+}
+
+.cart-img {
+  margin-right: 4px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.current-price-tag {
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  font-family: "Fraunces";
+  font-weight: 700;
+  margin-right: 1.2rem;
+}
+
+.previous-price-tag {
+  font-size: 0.7rem;
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.6rem;
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    flex-direction: row;
+    max-width: 700px;
+    justify-content: center;
+  }
+  .column {
+    width: 50%;
+    height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 1rem;
+  }
+}
